@@ -422,7 +422,7 @@ function mkFl(){const c=document.getElementById('fxF');const p=['🌸','🏵️'
 function mkHt(){const c=document.getElementById('fxH');const h=['💕','💗','💖','🩷','🤍'];setInterval(()=>{const t=document.createElement('div');t.className='ht';t.textContent=h[~~(Math.random()*h.length)];t.style.left=Math.random()*100+'%';t.style.fontSize=(Math.random()*12+14)+'px';t.style.animationDuration=(Math.random()*4+6)+'s';t.style.animationDelay=Math.random()*2+'s';c.appendChild(t);setTimeout(()=>t.remove(),12000)},900)}
 
 // Music - Đặt file nhạc CÙNG THƯ MỤC với file HTML
-const MF='music/A Thousand Eyes - Sarah Kang.mp3';
+const MF='music/I Love You.mp3';
 let bgMu=null,muPl=false;
 function initMu(){bgMu=new Audio(MF);bgMu.loop=true;bgMu.volume=0.3;bgMu.addEventListener('error',()=>{document.getElementById('mBtn').textContent='❌'})}
 function startMu(){if(!bgMu)initMu();bgMu.play().then(()=>{muPl=true;document.getElementById('mBtn').textContent='🎵'}).catch(()=>{muPl=false;document.getElementById('mBtn').textContent='🔇'})}
